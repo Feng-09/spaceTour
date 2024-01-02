@@ -1,0 +1,403 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+      font-family: "Barlow Condensed", sans-serif;
+      font-family: 'Bellefair', serif;
+      font-family: 'Barlow', sans-serif;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#root {
+  padding: 0;
+  height: 100vh;
+}
+
+@media (max-width:640px) {
+  .menu {
+  width: 0;
+  transition: 0.4s;
+}
+
+.menu div div {
+  width: 0;
+  transition: 0.1s;
+}
+
+.menu.active {
+  width: 15.875rem;
+  transition: 0.4s;
+}
+
+.menu.active div div {
+  width: 0.25rem;
+  transition-delay: 0.3s;
+}
+}
+
+
+#line1.active {
+  animation: Anim1;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+#line1.rest {
+  animation: Anim4;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#line2 {
+  transition: 0.25s;
+  transition-delay: 0.25s;
+}
+
+#line2.active {
+  transform: translateX(1rem);
+  opacity: 0;
+  transition: 0.25s;
+  transition-delay: 0.25s;
+}
+
+#line3.active {
+  animation: Anim3;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#line3.rest {
+  animation: Anim5;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Anim1 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(0.45rem) rotate(45deg);
+  }
+}
+
+@keyframes Anim3 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(-0.45rem) rotate(-45deg);
+  }
+}
+
+@keyframes Anim4 {
+  0% {
+    transform: translateY(0.45rem) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes Anim5 {
+  0% {
+    transform: translateY(-0.45rem) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.homeMobile {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: fit-content;
+  min-width: 100vw;
+  width: fit-content;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.destinationMobile {
+  background-image: url(../assets/destination/background-destination-mobile.jpg);
+  background-attachment: fixed;
+  min-width: 100vw;
+  width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.crewMobile {
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
+  background-attachment: fixed;
+  min-width: 100vw;
+  width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.techMobile {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  background-attachment: fixed;
+  min-width: 100vw;
+  width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.underLine {
+  height: 0.1875rem;
+  width: 1.125rem;
+  transform: scaleX(2);
+  transition: 0.2s;
+  background-color: white;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.nahLine {
+  height: 0.1875rem;
+  transition: 0.2s;
+  background-color: white;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.circleOn {
+  border-radius: 999999px;
+  background-color: white;
+  height: 0.625rem;
+  width: 0.625rem;
+}
+
+.circleOff {
+  border-radius: 999999px;
+  background-color: white;
+  opacity: 0.174363;
+  height: 0.625rem;
+  width: 0.625rem;
+}
+
+.circleOff:hover {
+  opacity: 0.3;
+}
+
+.bigCircle {
+  border-radius: 999999px;
+  background-color: white;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #0B0D17;
+  font-family: bellefair;
+  font-size: 1rem;
+  line-height: 2.5rem
+}
+
+.bigCircleOff {
+  border-radius: 999999px;
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  height: 2.5rem;
+  width: 2.5rem;
+  color: white;
+  font-family: bellefair;
+  font-size: 1rem;
+  line-height: 2.5rem;
+}
+
+.bigCircleOff:hover {
+  border: 1px solid white;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 640px) {
+  .idk {
+  transform: scaleX(2);
+  transition: 0.2s;
+  margin: auto;
+ }
+
+ .hov {
+  width: 2.5rem;
+  opacity: 0.3;
+ }
+
+ .homeMobile {
+  background-image: url(../assets/home/background-home-tablet.jpg);
+ }
+
+ .destinationMobile {
+  background-image: url(../assets/destination/background-destination-tablet.jpg);
+ }
+
+ .crewMobile {
+  background-image: url(../assets/crew/background-crew-tablet.jpg);
+ }
+
+ .techMobile {
+  background-image: url(../assets/technology/background-technology-tablet.jpg);
+ }
+
+ .bigCircle {
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+ }
+
+ .bigCircleOff {
+  width: 3.75rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+ }
+
+ .menuHov {
+  background-color: #ffffff;
+  height: 0.1875rem;
+  margin: auto;
+  opacity: 0.3;
+  flex-shrink: 0;
+ }
+}
+
+@media (min-width: 1024px) {
+  .homeMobile {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+  }
+
+  .destinationMobile {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+  }
+
+  .crewMobile {
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
+  }
+
+  .techMobile {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+  }
+
+  .hovTrans:hover {
+    box-shadow: 0 0 0 5.5rem hsla(0,0%,100%,0.1036);
+    transition: 0.1s;
+  }
+
+  .hovTrans {
+    transition: 0.2s;
+  }
+
+  #root {
+    padding: 0;
+    margin: 0;
+  }
+
+  .bigCircle {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+   }
+
+   .bigCircleOff {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+   }
+}
