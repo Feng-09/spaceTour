@@ -36,10 +36,10 @@ function App() {
     {window.screen.width >= 1280 ? (<div className="w-[29.5625rem] h-[1px] bg-white opacity-25 text-[1px] fixed top-[5.5rem] left-36 z-10">.</div>) : null}
     {window.screen.width < 640 ? <Hamburger handleMenu={handleMenu} /> : null}
     <Routes>
-      <Route path="/:id" element={<Home setIndex={setIndex} />} />
-      <Route path="/destination/:id" element={<Destination updateIndex={setIndex} />} />
-      <Route path="/crew/:id" element={<Crew updateIndex={setIndex} />} />
-      <Route path="/tech/:id" element={<Technology updateIndex={setIndex} />} />
+      <Route path="/" element={<Home setIndex={setIndex} />} />
+      <Route path="/destination" element={<Destination updateIndex={setIndex} />} />
+      <Route path="/crew" element={<Crew updateIndex={setIndex} />} />
+      <Route path="/tech" element={<Technology updateIndex={setIndex} />} />
     </Routes>
     <Menu index={index} setIndex={setIndex} menu={menu} />
   </main>

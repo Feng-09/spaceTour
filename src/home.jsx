@@ -20,7 +20,7 @@ function Home({ setIndex }) {
            Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
           </p>
           </div>
-          <Link to={"../destination/1"}>
+          <Link to={"../destination"}>
           <div className="relative mt-20 sm:mt-[9.75rem] xl:top-10" onClick={destination}>
            <img src={window.screen.width < 640 ? btnMobile : btnTablet} className="xl:w-[17.125rem] xl:h-[17.125rem] rounded-full xl:hover:cursor-pointer hovTrans" />           
            <p className="font-bellefair text-[1.25rem] tracking-[0.078125rem] relative bottom-[5.5rem] text-[#0B0D17] sm:text-[2rem] sm:tracking-[0.125rem] sm:bottom-[8.8rem] xl:bottom-[10rem]">EXPLORE</p>           
