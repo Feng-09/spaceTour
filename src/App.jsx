@@ -14,7 +14,7 @@ import { useGSAP } from '@gsap/react'
 function App() {
   const [menu, setMenu] = useState(false)
   const [index, setIndex] = useState(0)
-  const [pageTrans, setPageTrans] = useState(false)
+  const [pageTrans, setPageTrans] = useState(null)
 
   
 useGSAP(() => {
@@ -28,7 +28,7 @@ useGSAP(() => {
     each: 0.05,
     ease: 'power1.inOut'
   }})
-}, [pageTrans])
+}, pageTrans ? [pageTrans] : [])
 
   const handleMenu = (e) => {
     setMenu(!menu)
@@ -58,9 +58,9 @@ useGSAP(() => {
     {window.screen.width < 640 ? <Hamburger handleMenu={handleMenu} /> : null}
     <Routes>
       <Route path="/" element={<Home setIndex={setIndex} setPageTrans={setPageTrans} />} />
-      <Route path="/destination" element={<Destination updateIndex={setIndex} setPageTrans={setPageTrans} />} />
-      <Route path="/crew" element={<Crew updateIndex={setIndex} setPageTrans={setPageTrans} />} />
-      <Route path="/tech" element={<Technology updateIndex={setIndex} setPageTrans={setPageTrans} />} />
+      <Route path="/destination" element={<Destination updateIndex={setIndex} />} />
+      <Route path="/crew" element={<Crew updateIndex={setIndex} />} />
+      <Route path="/tech" element={<Technology updateIndex={setIndex} />} />
     </Routes>
     <Menu index={index} setIndex={setIndex} menu={menu} setPageTrans={setPageTrans} />
   </main>

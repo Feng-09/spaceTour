@@ -3,19 +3,19 @@ import { Outlet, Link, useNavigate } from "react-router-dom"
 function Menu({ index, setIndex, menu, setPageTrans }) {
     const navigate = useNavigate()
     const home = () => {
-        setPageTrans(a => !a)
+        setPageTrans(1)
         setTimeout(() => {setIndex(0)}, 500)        
     }
     const destination = () => {
-        setPageTrans(a => !a)
+        setPageTrans(2)
         setTimeout(() => {setIndex(1)}, 500)
     }
     const crew = () => {
-        setPageTrans(a => !a)
+        setPageTrans(3)
         setTimeout(() => {setIndex(2)}, 500)
     }
     const tech = () => {
-        setPageTrans(a => !a)
+        setPageTrans(4)
         setTimeout(() => {setIndex(3)}, 500)
     }
 
