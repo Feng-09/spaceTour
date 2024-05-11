@@ -19,16 +19,18 @@ function App() {
   
 useGSAP(() => {
   const tl = gsap.timeline()
-  tl.to('.pageTrans', { y: '100%', duration: 0.5, ease: 'power3.out',  stagger: {
-    each: 0.05,
-    from: 'end',
-    ease: 'power1.inOut'
-  }})
-  tl.to('.pageTrans', { y: '-100%', duration: 0.5, ease: 'power3.inOut(10)',  stagger: {
-    each: 0.05,
-    ease: 'power1.inOut'
-  }})
-}, pageTrans ? [pageTrans] : [])
+  if (pageTrans) {
+    tl.to('.pageTrans', { y: '100%', duration: 0.5, ease: 'power3.out',  stagger: {
+      each: 0.05,
+      from: 'end',
+      ease: 'power1.inOut'
+    }})
+    tl.to('.pageTrans', { y: '-100%', duration: 0.5, ease: 'power3.inOut(10)',  stagger: {
+      each: 0.05,
+      ease: 'power1.inOut'
+    }})
+  }
+}, [pageTrans])
 
   const handleMenu = (e) => {
     setMenu(!menu)
