@@ -42,7 +42,7 @@ function Crew({ updateIndex }) {
                 <p className="font-barlow text-[0.9375rem] text-[#D0D6F9] w-[20.4375rem] mt-4 sm:text-[1rem] sm:leading-7 sm:w-[28.625rem] xl:w-[27.75rem] xl:text-[1.125rem] xl:leading-8">{member.text}</p>
             </div>
             </div>
-        </div> 
+        </div>
     )
 }
 
