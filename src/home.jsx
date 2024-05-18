@@ -21,9 +21,10 @@ function Home({ setIndex, setPageTrans }) {
           </div>
           <Link to={"../destination"} onClick={(e) => {
             e.preventDefault();
-            setTimeout(() => {navigate('../destination')}, 500)
+            setTimeout(() => {navigate('../destination')}, 500);
+            setPageTrans(2)
           }}>
-          <div className="relative mt-20 sm:mt-[9.75rem] xl:top-10" onClick={() => {setPageTrans(1); setTimeout(destination, 500)}}>
+          <div className="relative mt-20 sm:mt-[9.75rem] xl:top-10" onClick={() => {setTimeout(destination, 500)}}>
            <img src={window.screen.width < 640 ? btnMobile : btnTablet} className="xl:w-[17.125rem] xl:h-[17.125rem] rounded-full xl:hover:cursor-pointer hovTrans" />           
            <p className="font-bellefair text-[1.25rem] tracking-[0.078125rem] relative bottom-[5.5rem] text-[#0B0D17] sm:text-[2rem] sm:tracking-[0.125rem] sm:bottom-[8.8rem] xl:bottom-[10rem]">EXPLORE</p>           
           </div>

@@ -2,11 +2,11 @@
 
 ## About
 
-This is Space Tourism Website takes you on a fun experience across the solar system, kinda. I used the react router dom for the first time (actually only learned of it while building this)
+This is Space Tourism Website takes you on a fun experience across the solar system, kinda. I used the react router dom for the first time (actually only learned of it while building this). I also added some cool page transition animations. Please enjoy!
 
 ## Technologies used
 
-React and Tailwind
+React, Tailwind, GSAP
 
 ### Screenshot
 
@@ -14,7 +14,7 @@ React and Tailwind
 
 ### Links
 
-- Live Site URL: [https://fengboris-spacetour.netlify.app](https://fengboris-spacetour.netlify.app)
+- Live Site URL: [https://feng-spacetour.netlify.app](https://feng-spacetour.netlify.app)
 
 ### Built with
  
